@@ -25,7 +25,7 @@ class Home extends React.Component {
         return (
             <ScrollView className='HomePage'>
                 <Text className='List-Item Title'>Hello World</Text>
-                <Button onClick={() => console.log('Button Pressed')}>Button</Button>
+                <Button className='ListButton' onClick={() => console.log('Button Pressed')}>Button</Button>
                 <Text className='List-Item Text'>Hello World</Text>
                 <Text className='List-Item Text'>Hello World</Text>
                 <Text className='List-Item Text'>Hello World</Text>
