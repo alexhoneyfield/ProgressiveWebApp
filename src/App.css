@@ -6,7 +6,13 @@
   justify-content: flex-start;
   align-items: stretch;
 
+  margin: auto;
+
+  border: 1px solid black;
+
   width: 100%;
+  max-width: 75vh;
+
   height: 100%;
 }
 
