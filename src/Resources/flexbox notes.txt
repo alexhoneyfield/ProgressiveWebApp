@@ -1,0 +1,11 @@
+for a fixed size component use 'flex: 0 0 auto;' and define the width and height if they need to be fixed
+this is also equivelant to 'flex: none;'
+
+'flex: auto;' means that a component can grow and shrink to fill the space around it. it won't shrink smaller than the inside content will allow
+this is equivelant to 'flex: 1 1 auto;'
+
+the values after the flex keyword are as follows 'flex: <flex_grow> <flex_shrink> <flex_basis>;'
+
+flex grow is a positive value indicating how much an element can grow. 0 means that no growth is allowed
+flex shrink is a positive value indicating how much an element can shrink. 0 means that no shrinkage is allowed
+flex basis is a value determining how much space an element can take up

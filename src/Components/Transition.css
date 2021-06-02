@@ -1,0 +1,17 @@
+.Transition {
+    flex: auto;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  
+    overflow-y: hidden;
+    
+    opacity: 1;
+    transition: opacity .3s;
+  }
+  
+  .FadeOut {
+    opacity: 0;
+  }

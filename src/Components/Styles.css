@@ -1,0 +1,14 @@
+.Text {
+    text-align: left;
+    font-size: large;
+    margin: 0;
+    user-select: none;
+}
+
+.Title {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 0;
+    user-select: none;
+}
