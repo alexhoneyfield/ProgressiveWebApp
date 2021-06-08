@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './List.css';
-import './ScrollView'
 import ScrollView from './ScrollView';
 
 class List extends React.Component {
@@ -10,13 +8,12 @@ class List extends React.Component {
         let items = [];
 
         for (var i = 0; i < this.props.data.length; i++) {
-            itemProps = String(this.props.data[i])
-            items[i] = <this.props.item {itemProps} />
+            items[i] = this.props.render(this.props.data[i])
         }
 
         return (
-            <ScrollView>
-
+            <ScrollView className={this.props.className}>
+                {items}
             </ScrollView>
         );
     }

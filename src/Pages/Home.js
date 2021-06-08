@@ -3,10 +3,8 @@ import React from 'react';
 import { get } from 'idb-keyval'
 
 import './Home.css';
-import Button from '../Components/Button'
 import Text from '../Components/Text'
-import Title from '../Components/Title'
-import ScrollView from '../Components/ScrollView'
+import List from '../Components/List'
 
 class Home extends React.Component {
     constructor(props) {
@@ -21,24 +19,33 @@ class Home extends React.Component {
         this.setState({ Username: await get('Username') })
     }
 
+    items = [
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World',
+        'Hello World'
+    ]
+
+    renderItem(data) {
+        return <Text className='home__list-item'>{data}</Text>
+    }
+
     render() {
         return (
-            <ScrollView className='home__container'>
-                <Title className='home__list-item'>Hello World</Title>
-                <Button className='home__list-item' onClick={() => console.log('Button Pressed')}>Button</Button>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-                <Text className='home__list-item'>Hello World</Text>
-            </ScrollView>
+            <List className='home__container' render={this.renderItem} data={this.items} />
         );
     }
 }
