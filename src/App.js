@@ -3,7 +3,6 @@ import React from 'react';
 import { get } from 'idb-keyval'
 
 import './App.css';
-import './Components/Styles.css'
 
 import Header from './Components/Header';
 import NavBar from './Components/NavBar';
@@ -46,7 +45,7 @@ class App extends React.Component {
   }
 
   pages = [
-    <Loading />,
+    <Loading text='Getting Login Details' />,
     <Login logIn={() => this.navigate(2)} />,
     <Home />,
     <Camera />

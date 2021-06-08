@@ -1,0 +1,6 @@
+.text {
+    text-align: left;
+    font-size: large;
+    margin: 0;
+    user-select: none;
+}

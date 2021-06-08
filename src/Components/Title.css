@@ -1,11 +1,4 @@
-.Text {
-    text-align: left;
-    font-size: large;
-    margin: 0;
-    user-select: none;
-}
-
-.Title {
+.title {
     text-align: center;
     font-size: x-large;
     font-weight: bolder;

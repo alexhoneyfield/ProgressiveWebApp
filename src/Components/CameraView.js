@@ -4,8 +4,9 @@ import './CameraView.css'
 
 import View from './View'
 import Button from './Button'
-import Text from './Text'
+import Title from './Title'
 import Transition from './Transition'
+import Loading from '../Pages/Loading'
 
 class CameraView extends React.Component {
 
@@ -105,12 +106,12 @@ class CameraView extends React.Component {
         let pages = [
             // Page 0: No camera
             <View className='CameraView'>
-                <Text className='Title'>No Camera</Text>
+                <Title>No Camera</Title>
             </View>,
 
             // Page 1: Getting camera feed
             <View className='CameraView'>
-                <Text className='Title'>Loading Camera</Text>
+                <Loading text='Loading Camera' />
             </View>,
 
             // Page 2: Camera preview

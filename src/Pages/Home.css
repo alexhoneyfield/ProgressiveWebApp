@@ -13,5 +13,5 @@
 
 .List-Item {
     margin: 5%;
-    text-align: center;
+    align-self: center;
 }

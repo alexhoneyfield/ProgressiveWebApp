@@ -1,3 +1,4 @@
 .ScrollView {
+    flex: none;
     overflow-y: scroll;
 }

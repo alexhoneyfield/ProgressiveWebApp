@@ -39,9 +39,9 @@ class Login extends React.Component {
     render() {
         return (
             <View className='LoginPage'>
-                <Text className='Text LoginLabel'>Username</Text>
+                <Text className='LoginLabel'>Username</Text>
                 <InputField update={this.updateUsername} />
-                <Text className='Text LoginLabel'>Password</Text>
+                <Text className='LoginLabel'>Password</Text>
                 <InputField update={this.updatePassword} type='password' />
                 <Button className='LoginButton' onClick={this.logIn}>Log In</Button>
             </View>

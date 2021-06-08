@@ -5,7 +5,7 @@ import { get } from 'idb-keyval'
 import './Home.css';
 import Button from '../Components/Button'
 import Text from '../Components/Text'
-//import View from '../Components/View'
+import Title from '../Components/Title'
 import ScrollView from '../Components/ScrollView'
 
 class Home extends React.Component {
@@ -24,20 +24,20 @@ class Home extends React.Component {
     render() {
         return (
             <ScrollView className='HomePage'>
-                <Text className='List-Item Title'>Hello World</Text>
+                <Title className='List-Item'>Hello World</Title>
                 <Button className='ListButton' onClick={() => console.log('Button Pressed')}>Button</Button>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
-                <Text className='List-Item Text'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
+                <Text className='List-Item'>Hello World</Text>
             </ScrollView>
         );
     }

@@ -1,17 +1,17 @@
 import React from 'react';
 
-import './Text.css'
+import './Title.css'
 
 import View from './View'
 
-class Text extends React.Component {
+class Title extends React.Component {
     render() {
         return (
             <View className={this.props.className}>
-                <p className='text'>{this.props.children}</p>
+                <p className='title'>{this.props.children}</p>
             </View>
         );
     }
 }
 
-export default Text;
+export default Title;
