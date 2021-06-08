@@ -2,8 +2,6 @@ import React from 'react';
 
 import './Title.css'
 
-import View from './View'
-
 class Title extends React.Component {
     render() {
         return (
