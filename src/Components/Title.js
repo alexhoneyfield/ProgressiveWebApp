@@ -7,9 +7,7 @@ import View from './View'
 class Title extends React.Component {
     render() {
         return (
-            <View className={this.props.className}>
-                <p className='title__title'>{this.props.children}</p>
-            </View>
+            <p className={this.props.className + ' title__title'}>{this.props.children}</p>
         );
     }
 }

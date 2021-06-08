@@ -64,7 +64,6 @@ class App extends React.Component {
 
             console.log('Called change for ' + this.props.name)
 
-            //this.props.change(this.state.nextPage)
             this.setState({ callChange: true })
         }
     }

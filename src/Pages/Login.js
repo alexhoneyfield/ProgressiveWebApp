@@ -40,9 +40,9 @@ class Login extends React.Component {
         return (
             <View className='login__container'>
                 <Text className='login__label'>Username</Text>
-                <InputField update={this.updateUsername} />
+                <InputField className='login__input' update={this.updateUsername} />
                 <Text className='login__label'>Password</Text>
-                <InputField update={this.updatePassword} type='password' />
+                <InputField className='login__input' update={this.updatePassword} type='password' />
                 <Button className='login__button' onClick={this.logIn}>Log In</Button>
             </View>
         );

@@ -39,5 +39,7 @@
 }
 
 .camera-view__button {
-    flex: auto;
+    flex: none;
+
+    width: 40%;
 }

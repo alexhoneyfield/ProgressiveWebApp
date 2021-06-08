@@ -21,7 +21,7 @@ class InputField extends React.Component {
 
     render() {
         return (
-            <input className='input-field__field' type={this.props.type} value={this.state.value} onChange={this.update} />
+            <input className={this.props.className + ' input-field__field'} type={this.props.type} value={this.state.value} onChange={this.update} />
         );
     }
 }

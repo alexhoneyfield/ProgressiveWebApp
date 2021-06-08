@@ -14,3 +14,10 @@
 .login__button {
     margin-top: 15%;
 }
+
+.login__input {
+    height: 25px;
+    width: 70%;
+
+    margin: 5px;
+}
