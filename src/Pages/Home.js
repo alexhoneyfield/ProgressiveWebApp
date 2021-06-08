@@ -23,21 +23,21 @@ class Home extends React.Component {
 
     render() {
         return (
-            <ScrollView className='HomePage'>
-                <Title className='List-Item'>Hello World</Title>
-                <Button className='ListButton' onClick={() => console.log('Button Pressed')}>Button</Button>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
-                <Text className='List-Item'>Hello World</Text>
+            <ScrollView className='home__container'>
+                <Title className='home__list-item'>Hello World</Title>
+                <Button className='home__list-item' onClick={() => console.log('Button Pressed')}>Button</Button>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
+                <Text className='home__list-item'>Hello World</Text>
             </ScrollView>
         );
     }

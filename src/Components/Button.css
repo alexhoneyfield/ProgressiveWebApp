@@ -1,4 +1,4 @@
-.Button {
+.button__button {
     background-color: cornflowerblue;
     border-color: black;
     border-width: 2px;
@@ -12,6 +12,6 @@
     transition-delay: 0s;
 }
 
-.Button:active {
+.button__button:active {
     opacity: 0.6;
 }

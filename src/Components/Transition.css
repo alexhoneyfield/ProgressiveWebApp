@@ -1,4 +1,4 @@
-.Transition {
+.transition__container {
     flex: auto;
   
     display: flex;
@@ -12,6 +12,6 @@
     transition: opacity .3s;
   }
   
-  .FadeOut {
+.transition__fade-out {
     opacity: 0;
-  }
+ }

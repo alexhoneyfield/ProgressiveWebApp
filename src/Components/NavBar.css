@@ -1,4 +1,4 @@
-.NavBar {
+.nav-bar__nav-bar {
     height: 50px;
     flex: none;
 
@@ -9,7 +9,7 @@
     background-color: #696969;
 }
 
-.Icon {
+.nav-bar__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,6 @@
     transition-duration: 0.15s;
 }
 
-.Icon:active {
+.nav-bar__icon:active {
     opacity: 0.6;
 }

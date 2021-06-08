@@ -56,10 +56,10 @@ class App extends React.Component {
 
     transitionEnd(e) {
         if (e.target === this.wrapper.current) {
-            console.log(this.props.name + (e.target.className === 'Transition FadeOut' ? (" has faded out from page " + this.state.page) : (' has faded in to page ' + this.state.nextPage)))
+            console.log(this.props.name + (e.target.className === 'transition__container transition__fade-out' ? (" has faded out from page " + this.state.page) : (' has faded in to page ' + this.state.nextPage)))
         }
 
-        if (e.target === this.wrapper.current && e.target.className === 'Transition FadeOut') {
+        if (e.target === this.wrapper.current && e.target.className === 'transition__container transition__fade-out') {
             this.setState({ page: this.state.nextPage, transitioning: false })
 
             console.log('Called change for ' + this.props.name)
@@ -73,10 +73,8 @@ class App extends React.Component {
 
         let page = this.props.pages[this.state.page]
 
-        //console.log(this.state.page + " , " + this.state.nextPage + ", " + this.props.name)
-
         return (
-            <div className={'Transition' + (this.state.transitioning ? ' FadeOut' : '')} onTransitionEnd={this.transitionEnd} ref={this.wrapper}>
+            <div className={'transition__container' + (this.state.transitioning ? ' transition__fade-out' : '')} onTransitionEnd={this.transitionEnd} ref={this.wrapper}>
                 {page}
             </div>
         );

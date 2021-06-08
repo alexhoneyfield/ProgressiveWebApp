@@ -1,4 +1,4 @@
-.App {
+.app__container {
   display: flex;
   
   flex: auto;
@@ -14,22 +14,4 @@
   max-width: 75vh;
 
   height: 100%;
-}
-
-.Page {
-  flex: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-
-  overflow-y: hidden;
-  
-  opacity: 1;
-  transition: opacity .3s;
-}
-
-.FadeOut {
-  opacity: 0;
 }

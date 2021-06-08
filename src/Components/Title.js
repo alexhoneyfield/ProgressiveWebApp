@@ -8,7 +8,7 @@ class Title extends React.Component {
     render() {
         return (
             <View className={this.props.className}>
-                <p className='title'>{this.props.children}</p>
+                <p className='title__title'>{this.props.children}</p>
             </View>
         );
     }

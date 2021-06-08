@@ -62,7 +62,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <View className='App'>
+      <View className='app__container'>
         <Header text={this.state.heading} />
         <Transition pages={this.pages} page={this.state.page} change={this.pageChange} name='Main' />
         <NavBar navigate={this.navigate} />

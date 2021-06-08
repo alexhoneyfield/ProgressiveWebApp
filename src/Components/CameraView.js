@@ -105,30 +105,30 @@ class CameraView extends React.Component {
 
         let pages = [
             // Page 0: No camera
-            <View className='CameraView'>
+            <View className='camera-view__container'>
                 <Title>No Camera</Title>
             </View>,
 
             // Page 1: Getting camera feed
-            <View className='CameraView'>
+            <View className='camera-view__container'>
                 <Loading text='Loading Camera' />
             </View>,
 
             // Page 2: Camera preview
-            <View className='CameraView'>
-                <video className='Camera' autoPlay playsInline muted ref={this.webcamElement} />
-                <canvas className='ImageCanvas' ref={this.canvasElement}></canvas>
-                <View className='ImageButtonContainer'>
-                    <Button className='ImageButton' onClick={this.takeImage}>Take Photo</Button>
+            <View className='camera-view__container'>
+                <video className='camera-view__video-preview' autoPlay playsInline muted ref={this.webcamElement} />
+                <canvas className='camera-view__canvas' ref={this.canvasElement}></canvas>
+                <View className='camera-view__button-container'>
+                    <Button className='camera-view__button' onClick={this.takeImage}>Take Photo</Button>
                 </View>
             </View>,
 
             // Page 3: Image snapshot
-            <View className='CameraView'>
-                <img className='ImagePreview' src={this.state.image} alt='' />
-                <View className='ImageButtonContainer'>
-                    <Button className='ImageButton' onClick={this.retakeImage}>Re-take Photo</Button>
-                    <Button className='ImageButton' onClick={this.saveImage}>Save Photo</Button>
+            <View className='camera-view__container'>
+                <img className='camera-view__captured-image' src={this.state.image} alt='' />
+                <View className='camera-view__button-container'>
+                    <Button className='camera-view__button' onClick={this.retakeImage}>Re-take Photo</Button>
+                    <Button className='camera-view__button' onClick={this.saveImage}>Save Photo</Button>
                 </View>
             </View>
         ]

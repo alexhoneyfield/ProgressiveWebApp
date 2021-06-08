@@ -38,12 +38,12 @@ class Login extends React.Component {
 
     render() {
         return (
-            <View className='LoginPage'>
-                <Text className='LoginLabel'>Username</Text>
+            <View className='login__container'>
+                <Text className='login__label'>Username</Text>
                 <InputField update={this.updateUsername} />
-                <Text className='LoginLabel'>Password</Text>
+                <Text className='login__label'>Password</Text>
                 <InputField update={this.updatePassword} type='password' />
-                <Button className='LoginButton' onClick={this.logIn}>Log In</Button>
+                <Button className='login__button' onClick={this.logIn}>Log In</Button>
             </View>
         );
     }

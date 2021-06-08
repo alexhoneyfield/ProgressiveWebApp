@@ -1,4 +1,4 @@
-.CameraView {
+.camera-view__container {
     flex: auto;
     position: relative;
 
@@ -10,23 +10,23 @@
     height: 100%;
 }
 
-.Camera {
+.camera-view__video-preview {
     flex: auto;
 
     object-fit: cover;
 }
 
-.ImagePreview {
+.camera-view__captured-image {
     flex: auto;
 
     object-fit: cover;
 }
 
-.ImageCanvas {
+.camera-view__canvas {
     display: none;
 }
 
-.ImageButtonContainer {
+.camera-view__button-container {
     width: 100%;
 
     position: absolute;
@@ -38,6 +38,6 @@
     align-items: center;
 }
 
-.ImageButton {
+.camera-view__button {
     flex: auto;
 }

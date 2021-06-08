@@ -1,4 +1,3 @@
-.View {
-    flex: none;
+.view__view {
     overflow-y: hidden;
 }

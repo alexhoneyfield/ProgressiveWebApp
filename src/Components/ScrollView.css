@@ -1,4 +1,3 @@
-.ScrollView {
-    flex: none;
+.scroll-view__scroll-view {
     overflow-y: scroll;
 }

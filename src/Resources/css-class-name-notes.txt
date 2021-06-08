@@ -1,0 +1,13 @@
+start class names with the name of the file with no capitals and use hyphens for spaces
+e.g. for the file "CameraView.js" you would use the text "camera-view"
+
+after the file name prefix use a double underscore "__" to delimit then use a string to represent
+what elements the class is for. Use hyphens for spaces and don't use capitals.
+
+If the elements the class is for have any modifiers then use another double underscore to delimit
+and use another string to represent what the modifier is.
+
+The format should look like this: file-name__class-use__modifier
+e.g. camera-view__camera-preview__portrait
+
+This should help avoid problems with class name duplications and other bugs.

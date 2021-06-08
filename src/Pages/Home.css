@@ -1,17 +1,13 @@
-.HomePage {
+.home__container {
     flex: 1;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
 }
 
-.ListButton {
-    align-self: center;
-}
-
-.List-Item {
+.home__list-item {
+    flex: none;
     margin: 5%;
-    align-self: center;
 }

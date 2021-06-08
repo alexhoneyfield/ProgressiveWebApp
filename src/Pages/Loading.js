@@ -8,9 +8,9 @@ import Title from '../Components/Title'
 class Loading extends React.Component {
     render() {
         return (
-            <View className="Loading">
-                <div className="Spinner"></div>
-                <Title className='LoadingText'>{this.props.text}</Title>
+            <View className="loading__container">
+                <div className="loading__spinner"></div>
+                <Title className='loading__text'>{this.props.text}</Title>
             </View>
         );
     }
