@@ -5,6 +5,7 @@ import './CameraView.css'
 import View from './View'
 import Button from './Button'
 import Text from './Text'
+import Transition from './Transition'
 
 class CameraView extends React.Component {
 
@@ -12,10 +13,9 @@ class CameraView extends React.Component {
         super()
 
         this.state = {
-            captured: false,
-            camera: true,
+            stream: null,
             image: null,
-            stream: null
+            page: 1
         }
 
         this.webcamElement = React.createRef();
@@ -24,9 +24,12 @@ class CameraView extends React.Component {
         this.takeImage = this.takeImage.bind(this)
         this.retakeImage = this.retakeImage.bind(this)
         this.saveImage = this.saveImage.bind(this)
+
+        this.pageChanged = this.pageChanged.bind(this)
     }
 
     componentDidMount() {
+        console.log('Mount')
         this.initializeCamera()
     }
 
@@ -38,35 +41,31 @@ class CameraView extends React.Component {
 
         if (navigator.mediaDevices !== undefined && navigator.mediaDevices.getUserMedia !== undefined) {
             try {
-                let stream = await navigator.mediaDevices.getUserMedia({
-                    audio: false, video: { facingMode: 'environment' }
-                })
+                let stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: { facingMode: 'environment' } })
 
-                this.setState({ stream: stream })
+                this.setState({ stream: stream, page: 2 })
 
-                if ("srcObject" in this.webcamElement.current) {
-                    this.webcamElement.current.srcObject = stream;
-                } else {
-                    // For older browsers without the srcObject.
-                    this.webcamElement.current.src = window.URL.createObjectURL(stream);
-                }
+                console.log('Camera aquired')
             } catch (error) {
-                this.setState({ camera: false })
+                console.log('Error getting camera feed')
+                this.setState({ page: 0 })
             }
         } else {
-            this.setState({ camera: false })
+            console.log('Error getting camera feed')
+            this.setState({ page: 0 })
         }
     }
 
     closeCamera() {
         if (this.state.stream !== null) {
-            this.state.stream.getTracks().forEach(function (track) {
-                track.stop();
-            });
+            this.state.stream.getTracks().forEach(track => track.stop())
+            this.setState({ stream: null })
         }
     }
 
-    takeBase64Photo() {
+    takeImage() {
+
+        console.log("Image taken")
 
         const imageWidth = this.webcamElement.current.videoWidth;
         const imageHeight = this.webcamElement.current.videoHeight;
@@ -77,18 +76,12 @@ class CameraView extends React.Component {
 
         context.drawImage(this.webcamElement.current, 0, 0, imageWidth, imageHeight);
 
-        const base64 = this.canvasElement.current.toDataURL('image/jpeg', 0.85);
-        return base64;
-    }
-
-    takeImage() {
-        const img = this.takeBase64Photo()
-        this.setState({ captured: true, image: img })
+        this.setState({ page: 3, image: this.canvasElement.current.toDataURL('image/jpeg', 0.85) })
         this.closeCamera()
     }
 
     retakeImage() {
-        this.setState({ captured: false, stream: null })
+        this.setState({ page: 1 })
         this.initializeCamera()
     }
 
@@ -96,40 +89,50 @@ class CameraView extends React.Component {
         console.log(this.state.image)
     }
 
-    render() {
+    pageChanged(i) {
+        console.log('Page: ' + i)
+        if (i === 2) {
+            if ("srcObject" in this.webcamElement.current) {
+                console.log('Source object')
+                this.webcamElement.current.srcObject = this.state.stream;
+            }
+        }
+    }
 
-        if (this.state.camera && this.state.stream !== null) {
-            const image = this.state.captured ? <img className='ImagePreview' src={this.state.image} alt='' /> : <video className='Camera' autoPlay playsInline muted ref={this.webcamElement} />
-            const buttons = this.state.captured ?
+    render() {
+        console.log('Render')
+
+        let pages = [
+            // Page 0: No camera
+            <View className='CameraView'>
+                <Text className='Title'>No Camera</Text>
+            </View>,
+
+            // Page 1: Getting camera feed
+            <View className='CameraView'>
+                <Text className='Title'>Loading Camera</Text>
+            </View>,
+
+            // Page 2: Camera preview
+            <View className='CameraView'>
+                <video className='Camera' autoPlay playsInline muted ref={this.webcamElement} />
+                <canvas className='ImageCanvas' ref={this.canvasElement}></canvas>
+                <View className='ImageButtonContainer'>
+                    <Button className='ImageButton' onClick={this.takeImage}>Take Photo</Button>
+                </View>
+            </View>,
+
+            // Page 3: Image snapshot
+            <View className='CameraView'>
+                <img className='ImagePreview' src={this.state.image} alt='' />
                 <View className='ImageButtonContainer'>
                     <Button className='ImageButton' onClick={this.retakeImage}>Re-take Photo</Button>
                     <Button className='ImageButton' onClick={this.saveImage}>Save Photo</Button>
                 </View>
-                :
-                <View className='ImageButtonContainer'>
-                    <Button className='ImageButton' onClick={this.takeImage}>Take Photo</Button>
-                </View>
+            </View>
+        ]
 
-            return (
-                <View className='CameraView'>
-                    {image}
-                    <canvas className='ImageCanvas' ref={this.canvasElement}></canvas>
-                    {buttons}
-                </View>
-            )
-        } else if (this.state.stream === null && this.state.camera) {
-            return (
-                <View className='CameraView'>
-                    <Text className='Title'>Loading Camera</Text>
-                </View>
-            )
-        } else {
-            return (
-                <View className='CameraView'>
-                    <Text className='Title'>No Camera</Text>
-                </View>
-            )
-        }
+        return <Transition pages={pages} page={this.state.page} change={this.pageChanged} name='Camera' />
     }
 }
 
