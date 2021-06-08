@@ -48,11 +48,11 @@ class CameraView extends React.Component {
 
                 console.log('Camera aquired')
             } catch (error) {
-                console.log('Error getting camera feed')
+                console.log('Error getting camera feed: ' + error)
                 this.setState({ page: 0 })
             }
         } else {
-            console.log('Error getting camera feed')
+            console.log('Error getting camera feed: Browser unsupported')
             this.setState({ page: 0 })
         }
     }
