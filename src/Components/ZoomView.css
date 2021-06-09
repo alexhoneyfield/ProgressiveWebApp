@@ -1,0 +1,5 @@
+.zoom-view__zoom-view {
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+    overflow: scroll;
+}

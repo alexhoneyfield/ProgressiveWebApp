@@ -4,10 +4,13 @@ import { get, del } from 'idb-keyval'
 
 import './Home.css';
 
+import cat from '../Resources/cat-image.jpg'
+
 import View from '../Components/View'
 import Button from '../Components/Button'
 import Label from '../Components/Label'
 import List from '../Components/List'
+import ZoomView from '../Components/ZoomView'
 
 class Home extends React.Component {
     constructor(props) {
@@ -61,10 +64,14 @@ class Home extends React.Component {
                 <Label className='home__label'>Username: {this.state.Username}</Label>
                 <Label className='home__label'>Password: {this.state.Password}</Label>
                 <Button className='home__button' onClick={this.deleteLogin}>Delete Login Information</Button>
-                <List render={this.renderItem} data={this.items} />
+                <ZoomView className='home__zoom-view'>
+                    <img className='' src={cat} alt='' />
+                </ZoomView>
             </View>
         );
     }
 }
+
+//<List render={this.renderItem} data={this.items} />
 
 export default Home;
