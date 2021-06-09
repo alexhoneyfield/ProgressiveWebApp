@@ -8,9 +8,7 @@
 }
 
 .home__list-item {
-    white-space: nowrap;
     align-self: center;
-    border: 1px solid violet;
     margin: 5%;
 }
 
@@ -20,6 +18,6 @@
 }
 
 .home__label {
-    margin: 5%;
     align-self: center;
+    margin: 5%;
 }

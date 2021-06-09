@@ -2,4 +2,5 @@
     text-align: left;
     font-size: large;
     user-select: none;
+    white-space: nowrap;
 }
