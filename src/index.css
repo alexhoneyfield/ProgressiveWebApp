@@ -16,12 +16,6 @@ body {
 html {
   touch-action: manipulation;
   -ms-touch-action: manipulation;
-  
-  position: absolute; 
-  width: 100%; 
-  height: 100%; 
-  
-  overflow: hidden;
 }
 
 input::-ms-reveal, input::-ms-clear {
@@ -29,7 +23,6 @@ input::-ms-reveal, input::-ms-clear {
 }
 
 #root {
-  position: absolute; 
   width: 100%; 
   height: 100%; 
   background-color: #bfbfbf;
