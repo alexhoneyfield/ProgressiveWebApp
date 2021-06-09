@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/build/static/css/main.cc6e11d3.chunk.css",
+    "main.css": "/build/static/css/main.06833fb3.chunk.css",
     "main.js": "/build/static/js/main.4dea0004.chunk.js",
     "main.js.map": "/build/static/js/main.4dea0004.chunk.js.map",
     "runtime-main.js": "/build/static/js/runtime-main.87e3d68a.js",
@@ -12,14 +12,14 @@
     "index.html": "/build/index.html",
     "service-worker.js": "/build/service-worker.js",
     "service-worker.js.map": "/build/service-worker.js.map",
-    "static/css/main.cc6e11d3.chunk.css.map": "/build/static/css/main.cc6e11d3.chunk.css.map",
+    "static/css/main.06833fb3.chunk.css.map": "/build/static/css/main.06833fb3.chunk.css.map",
     "static/js/2.771038d3.chunk.js.LICENSE.txt": "/build/static/js/2.771038d3.chunk.js.LICENSE.txt",
     "static/media/home-icon.a2449c03.png": "/build/static/media/home-icon.a2449c03.png"
   },
   "entrypoints": [
     "static/js/runtime-main.87e3d68a.js",
     "static/js/2.771038d3.chunk.js",
-    "static/css/main.cc6e11d3.chunk.css",
+    "static/css/main.06833fb3.chunk.css",
     "static/js/main.4dea0004.chunk.js"
   ]
 }

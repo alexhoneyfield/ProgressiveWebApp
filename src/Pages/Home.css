@@ -8,7 +8,9 @@
 }
 
 .home__list-item {
-    border: 1px solid blue;
+    white-space: nowrap;
+    align-self: center;
+    border: 1px solid violet;
     margin: 5%;
 }
 
