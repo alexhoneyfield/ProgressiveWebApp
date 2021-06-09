@@ -23,4 +23,6 @@ input::-ms-reveal, input::-ms-clear {
   width: 100%; 
   height: 100%; 
   background-color: #bfbfbf;
+
+  overflow-y: hidden;
 }
