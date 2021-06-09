@@ -8,8 +8,7 @@
 }
 
 .home__list-item {
-    align-self: center;
-    border: 1px solid green;
+    border: 1px solid blue;
     margin: 5%;
 }
 
