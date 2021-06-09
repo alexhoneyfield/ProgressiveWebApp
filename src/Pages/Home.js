@@ -6,7 +6,7 @@ import './Home.css';
 
 import View from '../Components/View'
 import Button from '../Components/Button'
-import Text from '../Components/Text'
+import Label from '../Components/Label'
 import List from '../Components/List'
 
 class Home extends React.Component {
@@ -45,7 +45,7 @@ class Home extends React.Component {
     ]
 
     renderItem(data) {
-        return <Text className='home__list-item' key={data.key}>{data.name}</Text>
+        return <Label className='home__list-item' key={data.key}>{data.name}</Label>
     }
 
     deleteLogin() {
@@ -58,8 +58,8 @@ class Home extends React.Component {
     render() {
         return (
             <View className='home__container'>
-                <Text className='home__label'>Username: {this.state.Username}</Text>
-                <Text className='home__label'>Password: {this.state.Password}</Text>
+                <Label className='home__label'>Username: {this.state.Username}</Label>
+                <Label className='home__label'>Password: {this.state.Password}</Label>
                 <Button className='home__button' onClick={this.deleteLogin}>Delete Login Information</Button>
                 <List render={this.renderItem} data={this.items} />
             </View>

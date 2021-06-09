@@ -4,7 +4,7 @@ import { set } from 'idb-keyval'
 
 import './Login.css';
 import Button from '../Components/Button'
-import Text from '../Components/Text'
+import Label from '../Components/Label'
 import InputField from '../Components/InputField'
 import View from '../Components/View'
 
@@ -39,9 +39,9 @@ class Login extends React.Component {
     render() {
         return (
             <View className='login__container'>
-                <Text className='login__label'>Username</Text>
+                <Label className='login__label'>Username</Label>
                 <InputField className='login__input' update={this.updateUsername} />
-                <Text className='login__label'>Password</Text>
+                <Label className='login__label'>Password</Label>
                 <InputField className='login__input' update={this.updatePassword} type='password' />
                 <Button className='login__button' onClick={this.logIn}>Log In</Button>
             </View>

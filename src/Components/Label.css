@@ -1,5 +1,6 @@
-.text__text {
+.label__label {
     text-align: left;
     font-size: large;
     user-select: none;
+    white-space: nowrap;
 }
