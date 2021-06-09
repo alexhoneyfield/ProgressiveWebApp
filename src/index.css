@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 html {
@@ -26,5 +26,5 @@ input::-ms-reveal, input::-ms-clear {
   height: 100%; 
   background-color: #bfbfbf;
 
-  overflow-y: hidden;
+  overflow: hidden;
 }
