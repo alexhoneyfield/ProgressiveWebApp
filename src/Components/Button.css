@@ -1,8 +1,9 @@
 .button__button {
-    background-color: cornflowerblue;
-    border-color: black;
-    border-width: 2px;
+    background-color: #bfbfbf;
+
+    border: 1px solid #696969;
     border-radius: 10px;
+
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
@@ -10,6 +11,11 @@
 
     transition-duration: 0.15s;
     transition-delay: 0s;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .button__button:active {
@@ -17,5 +23,6 @@
 }
 
 .button__text {
+    flex: none;
     margin: 0;
 }

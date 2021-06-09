@@ -14,7 +14,8 @@ class Home extends React.Component {
         super(props)
 
         this.state = {
-            Username: ''
+            Username: '',
+            Password: ''
         }
 
         this.deleteLogin = this.deleteLogin.bind(this)
@@ -22,6 +23,7 @@ class Home extends React.Component {
 
     async componentDidMount() {
         this.setState({ Username: await get('Username') })
+        this.setState({ Password: await get('Password') })
     }
 
     items = [
@@ -49,11 +51,15 @@ class Home extends React.Component {
     deleteLogin() {
         del('Username')
         del('Password')
+
+        this.setState({ Username: '', Password: '' })
     }
 
     render() {
         return (
             <View className='home__container'>
+                <Text className='home__label'>Username: {this.state.Username}</Text>
+                <Text className='home__label'>Password: {this.state.Password}</Text>
                 <Button className='home__button' onClick={this.deleteLogin}>Delete Login Information</Button>
                 <List render={this.renderItem} data={this.items} />
             </View>

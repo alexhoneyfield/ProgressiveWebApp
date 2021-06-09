@@ -8,11 +8,16 @@
 }
 
 .home__list-item {
-    flex: none;
+    flex: auto;
     margin: 5%;
 }
 
 .home__button {
     align-self: center;
     margin: 5%;
+}
+
+.home__label {
+    margin: 5%;
+    align-self: center;
 }
