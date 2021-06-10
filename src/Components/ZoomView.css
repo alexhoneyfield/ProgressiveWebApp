@@ -1,5 +1,15 @@
 .zoom-view__zoom-view {
-    touch-action: manipulation;
-    -ms-touch-action: manipulation;
     overflow: scroll;
+    touch-action: manipulation;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.zoom-view__zoom-view::-webkit-scrollbar {
+    display: none;
+}
+
+.zoom-view__container {
+    display: flex;
 }

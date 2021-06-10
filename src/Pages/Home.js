@@ -9,7 +9,6 @@ import cat from '../Resources/cat-image.jpg'
 import View from '../Components/View'
 import Button from '../Components/Button'
 import Label from '../Components/Label'
-import List from '../Components/List'
 import ZoomView from '../Components/ZoomView'
 
 class Home extends React.Component {
@@ -64,8 +63,8 @@ class Home extends React.Component {
                 <Label className='home__label'>Username: {this.state.Username}</Label>
                 <Label className='home__label'>Password: {this.state.Password}</Label>
                 <Button className='home__button' onClick={this.deleteLogin}>Delete Login Information</Button>
-                <ZoomView className='home__zoom-view'>
-                    <img className='' src={cat} alt='' />
+                <ZoomView className='home__zoom-view' width={975} height={531} scale={1}>
+                    <img className='home__image' src={cat} alt='' />
                 </ZoomView>
             </View>
         );
